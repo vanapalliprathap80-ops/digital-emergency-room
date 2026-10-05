@@ -3,9 +3,9 @@ spring:
     name: digital-emergency-room
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/emergency
-    username: emergency
-    password: emergency123
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/emergency}
+    username: ${SPRING_DATASOURCE_USERNAME:emergency}
+    password: ${SPRING_DATASOURCE_PASSWORD:emergency123}
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 10
@@ -27,7 +27,7 @@ spring:
     baseline-on-migrate: false
 
 server:
-  port: 8080
+  port: ${PORT:8080}
   error:
     include-message: never
     include-stacktrace: never
