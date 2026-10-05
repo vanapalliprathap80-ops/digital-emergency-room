@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/emergency
+    username: emergency
+    password: emergency123
+
+logging:
+  level:
+    com.emergency: INFO

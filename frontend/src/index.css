@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #080B16;
+    color: #F8FAFC;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #101526;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a3550;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8B5CF6;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface rounded-lg border border-white/5 p-4;
+  }
+  
+  .card-elevated {
+    @apply bg-elevated rounded-lg border border-white/8 p-4;
+  }
+
+  .badge-healthy {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-healthy/10 text-healthy border border-healthy/20;
+  }
+
+  .badge-degraded {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-attention/10 text-attention border border-attention/20;
+  }
+
+  .badge-unavailable {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-critical/10 text-critical border border-critical/20;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 rounded-md bg-primary text-white font-medium text-sm transition-colors hover:bg-primary/80 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 rounded-md bg-elevated border border-white/10 text-text-main font-medium text-sm transition-colors hover:bg-white/5 active:scale-95;
+  }
+
+  .metric-value {
+    @apply text-2xl font-bold text-text-main tabular-nums;
+  }
+
+  .metric-label {
+    @apply text-xs text-text-muted uppercase tracking-wider;
+  }
+
+  .table-row {
+    @apply border-b border-white/5 hover:bg-white/5 transition-colors;
+  }
+
+  .table-th {
+    @apply text-left text-xs font-medium text-text-muted uppercase tracking-wider py-3 px-4;
+  }
+
+  .table-td {
+    @apply py-3 px-4 text-sm text-text-main;
+  }
+}

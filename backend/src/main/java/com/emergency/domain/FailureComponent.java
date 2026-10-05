@@ -1,0 +1,15 @@
+package com.emergency.domain;
+
+public enum FailureComponent {
+    CONNECTION_POOL,
+    QUERY_EXECUTION,
+    PERSISTENCE,
+    PAYMENT_PROVIDER_SIMULATION,
+    GATEWAY,
+    INGRESS_ROUTER,
+    CPU_SUBSYSTEM,
+    MEMORY_SUBSYSTEM,
+    DEPLOYMENT,
+    TOKEN_VERIFICATION,
+    BUSINESS_LOGIC
+}
